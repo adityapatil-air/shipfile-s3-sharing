@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./components/LandingPage";
 import LoginSelector from "./components/LoginSelector";
+import OwnerAuth from "./components/OwnerAuth";
+import MemberAuth from "./components/MemberAuth";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginSelector />} />
+          <Route path="/owner-auth" element={<OwnerAuth />} />
+          <Route path="/member-auth" element={<MemberAuth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

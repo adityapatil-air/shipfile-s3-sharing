@@ -10,8 +10,12 @@ const LoginSelector = () => {
 
   const handleModeSelect = (mode: 'owner' | 'member') => {
     setSelectedMode(mode);
-    // Here you would navigate to the appropriate auth flow
-    // For now, we'll just show the selection
+    // Navigate to appropriate auth flow
+    if (mode === 'owner') {
+      window.location.href = '/owner-auth';
+    } else {
+      window.location.href = '/member-auth';
+    }
   };
 
   return (
